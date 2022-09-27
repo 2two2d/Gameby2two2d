@@ -39,8 +39,9 @@ input[type=range]{
     left: 100px;
     width: 280px;
     -webkit-appearance: none;
-    background: linear-gradient(90deg,lightblue,lightcoral);
+    background: lightblue;
     height: 8px;
+    outline: none;
 }
 
 input[type=range]::-webkit-slider-thumb{
@@ -90,4 +91,42 @@ button:active{
     border: none;
     background: lightgreen;
     color: white;
+}
+
+div{
+    animation: apear 0.6s;
+}
+
+#title{
+    position: relative;
+    top: 100px;
+    width: 800px;
+    text-align: center;
+    font-size: 3.5em;
+    z-index: 10;
+}
+
+@keyframes apear {
+    from{
+        transform: scale(1.8);
+        filter: opacity(0);
+    }to{
+        transform: scale(1);
+        filter: opacity(1);}
+}
+
+@keyframes win {
+    from{
+        border-color: lightgreen;
+        box-shadow: 0 0 10px lightgreen;
+    }to{
+        border-color: darkgrey;}
+}
+
+@keyframes lose {
+    from{
+        border-color: coral;
+        box-shadow: 0 0 10px coral;
+    }to{
+         border-color: darkgrey;}
 }
